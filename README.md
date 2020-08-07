@@ -88,11 +88,11 @@
 ## Changes
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.0...v0.0.1
   * Basic config and setup
+    * `gem 'simple_form'`
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.1...v0.0.2
   * Start trying Multi-Language for layout
     * Rails scaffold
-    * `gem 'simple_form'`
     * `gem 'rails-i18n', '~> 6.0.0'`
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.2...v0.0.3
