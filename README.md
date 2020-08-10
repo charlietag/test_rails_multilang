@@ -108,6 +108,14 @@
   * `config.i18n.fallbacks = true`
     * This is already been set in `{RailsApp}/config/environments/production.rb`
     * This is used , when choosed locale is not found.
+* Leak issue
+  * https://guides.rubyonrails.org/i18n.html#managing-the-locale-across-requests
+    * Dos
+      * `I18n.with_locale`
+    * Don'ts
+      * `I18n.locale =`
+
+
 * References
   * Layout Multi-language
     * Ref. https://guides.rubyonrails.org/i18n.html
