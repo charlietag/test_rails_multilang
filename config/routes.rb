@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   #scope "(:locale)", locale: /en|"zh-TW"/ do #<--- [err] rails route doesn't allow ""
   #scope "/:locale" do                        #<--- Allow all locale
+
+  # default redirect to /:locale/books , such as /en/books
   scope "(:locale)", locale: /en|zh-TW/ do    #<--- Allow only specific language
     resources :configs
     resources :books
