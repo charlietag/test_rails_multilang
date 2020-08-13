@@ -1,4 +1,5 @@
 # --------------------------------------------------------------------------------------
+# Ref. https://guides.rubyonrails.org/i18n.html#configure-the-i18n-module
 # Ref. https://yalantis.com/blog/multi-language-ruby-on-rails-app-development/
 # Easier way to classify locale yml files
 # --------------------------------------------------------------------------------------
