@@ -130,3 +130,5 @@
     * Ref. https://yalantis.com/blog/multi-language-ruby-on-rails-app-development/
   * Content Multi-Language
     * Ref. https://github.com/globalize/globalize/tree/v6.0.0.alpha.1
+  * It's About Time (Zones)
+    * https://thoughtbot.com/blog/its-about-time-zones
