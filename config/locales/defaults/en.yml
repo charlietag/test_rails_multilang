@@ -30,4 +30,16 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "NAME: Hello %{name}"
+
+# Don't define the following , USE "gem 'rails-i18n', '~> 6.0.0'" instead
+  #date:
+  #  formats:
+  #    default: "%d/%m/%Y"
+  #    short: "%b %d"
+  #    long: "%B %d, %Y"
+  #time:
+  #  formats:
+  #    default: "%H:%M:%S"
+  #    short: "%H:%M"
+  #    long: "%H:%M:%S, %d %B"

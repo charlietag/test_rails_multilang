@@ -1,0 +1,8 @@
+en:
+  books:
+    create:
+      success: "Book was successfully created. - %{book_name}"
+    update:
+      success: "Book was successfully updated. - %{book_name}"
+    destroy:
+      success: "Book was successfully destroyed. - %{book_name}"

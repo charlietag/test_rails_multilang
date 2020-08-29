@@ -1,0 +1,8 @@
+"zh-TW":
+  books:
+    create:
+      success: "書籍已經成功新增！ - %{book_name}"
+    update:
+      success: "書籍已經成功修改！ - %{book_name}"
+    destroy:
+      success: "書籍已經成功刪除！ - %{book_name}"

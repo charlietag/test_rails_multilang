@@ -1,0 +1,14 @@
+"zh-TW":
+  hello: "名字: %{name} 你好!"
+
+# Don't define the following , USE "gem 'rails-i18n', '~> 6.0.0'" instead
+  #date:
+  #  formats:
+  #    default: "%Y-%m-%d"
+  #    short: "%b %d"
+  #    long: "%B %d, %Y"
+  #time:
+  #  formats:
+  #    default: "%H:%M:%S"
+  #    short: "%H:%M"
+  #    long: "%H:%M:%S, %d %B"

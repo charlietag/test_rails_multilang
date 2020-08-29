@@ -1,0 +1,7 @@
+en:
+  books:
+    index:
+      books_count:
+        zero: "Book quantity: Sorry no books found here !!"
+        one: "Book quantity: There is 1 book !"
+        other: "Book quantity: There are %{count} books！"

@@ -1,0 +1,7 @@
+"zh-TW":
+  books:
+    index:
+      books_count:
+        zero: "書本數量: 抱歉，目前沒有藏書！"
+        one: "書本數量: 這有 1 本書！"
+        other: "書本數量: 這有 %{count} 本書！"

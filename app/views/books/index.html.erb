@@ -1,13 +1,37 @@
+<!--
+  Ref. https://ihower.tw/rails/actionview-helpers.html
+  -->
 <p id="notice"><%= notice %></p>
 
-<h1>Books</h1>
+<h1><%= t Book.model_name.human %></h1>
+<h2>(<%= t 'hello', name: params[:name]  %>)</h2>
+<h2>(<%= l Time.current  %>)</h2>
+<h2>(<%= l Time.zone.today  %>)</h2>
+
+
+<!--
+(Book quantity: There are 4 books！)
+(Book quantity: There are $9,898,989,898.00 books！)
+(Book quantity: There are 9898989898.000 books！)
+(Book quantity: There are 9898989898.000% books！)
+(Book quantity: There are 9,898,989,898 books！)
+(Book quantity: There are 9.22 GB books！)
+-->
+<h2>(<%= t '.books_count', count: @books.count  %>)</h2>
+<h2>(<%= t '.books_count', count: number_to_currency(9898989898)  %>)</h2>
+<h2>(<%= t '.books_count', count: number_with_precision(9898989898)  %>)</h2>
+<h2>(<%= t '.books_count', count: number_to_percentage(9898989898)  %>)</h2>
+<h2>(<%= t '.books_count', count: number_with_delimiter(9898989898)  %>)</h2>
+<h2>(<%= t '.books_count', count: number_to_human_size(9898989898)  %>)</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Author</th>
-      <th>Description</th>
+      <th><%= t Book.human_attribute_name "book.name" %></th>
+      <th><%= t Book.human_attribute_name "book.author" %></th>
+      <th><%= t Book.human_attribute_name "book.description" %></th>
+      <th><%= t Book.human_attribute_name "book.created_at" %></th>
+      <th><%= t Book.human_attribute_name "book.updated_at" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +42,11 @@
         <td><%= book.name %></td>
         <td><%= book.author %></td>
         <td><%= book.description %></td>
+        <td><%= book.created_at %> ,
+            <!-- https://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-distance_of_time_in_words_to_now -->
+            <%= distance_of_time_in_words_to_now book.created_at %>
+        </td>
+        <td><%= book.updated_at %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>

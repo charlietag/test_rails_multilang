@@ -94,6 +94,9 @@
   * Start trying Multi-Language for layout
     * Rails scaffold
     * `gem 'rails-i18n', '~> 6.0.0'`
+  * Ref
+    * https://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-distance_of_time_in_words_to_now
+    * (Chinese) https://ihower.tw/rails/actionview-helpers.html
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.2...v0.0.3
   * Start trying (Locale - detected by **The Accept-Language HTTP header**)

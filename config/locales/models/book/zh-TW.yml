@@ -1,0 +1,13 @@
+"zh-TW":
+  activerecord:
+    models:
+      book:
+        one: 書籍
+        other: 書籍
+    attributes:
+      book:
+        name: "書名"
+        author: "作者"
+        description: "書籍描述"
+        created_at: "建立時間"
+        updated_at: "更新時間"
