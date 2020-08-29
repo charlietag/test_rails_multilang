@@ -97,11 +97,11 @@
   * Ref
     * https://guides.rubyonrails.org/i18n.html#overview-of-other-built-in-methods-that-provide-i18n-support
     * https://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-distance_of_time_in_words_to_now
-    * (Chinese) https://ihower.tw/rails/actionview-helpers.html
+    * https://ihower.tw/rails/actionview-helpers.html (Chinese)
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.2...v0.0.3
   * Start trying Multi-Language for layout
-    * change locale by
+    * **change locale by -**
       * Config setting in DB - Config.where(name: "locale").first.value
       * detected by **The Accept-Language HTTP header**
 
