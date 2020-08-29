@@ -95,6 +95,7 @@
     * Rails scaffold
     * `gem 'rails-i18n', '~> 6.0.0'`
   * Ref
+    * https://guides.rubyonrails.org/i18n.html#overview-of-other-built-in-methods-that-provide-i18n-support
     * https://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-distance_of_time_in_words_to_now
     * (Chinese) https://ihower.tw/rails/actionview-helpers.html
 
