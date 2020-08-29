@@ -91,7 +91,7 @@
     * `gem 'simple_form'`
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.1...v0.0.2
-  * Start trying Multi-Language for layout
+  * Start trying Multi-Language for layout (change locale by URI - rails routes)
     * Rails scaffold
     * `gem 'rails-i18n', '~> 6.0.0'`
   * Ref
@@ -100,7 +100,10 @@
     * (Chinese) https://ihower.tw/rails/actionview-helpers.html
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.2...v0.0.3
-  * Start trying (Locale - detected by **The Accept-Language HTTP header**)
+  * Start trying Multi-Language for layout
+    * change locale by
+      * Config setting in DB - Config.where(name: "locale").first.value
+      * detected by **The Accept-Language HTTP header**
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.3...v0.0.4
   * Start trying GEM: **globalize**
