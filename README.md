@@ -94,10 +94,10 @@
   * Start trying Multi-Language for layout (change locale by URI - rails routes)
     * Rails scaffold
     * `gem 'rails-i18n', '~> 6.0.0'`
-  * Ref
-    * https://guides.rubyonrails.org/i18n.html#overview-of-other-built-in-methods-that-provide-i18n-support
-    * https://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-distance_of_time_in_words_to_now
-    * https://ihower.tw/rails/actionview-helpers.html (Chinese)
+  * i18n built in methods
+    * [RailsGuide-i18n#overview-of-other-built-in-methods-that-provide-i18n-support](https://guides.rubyonrails.org/i18n.html#overview-of-other-built-in-methods-that-provide-i18n-support)
+    * [RailsGuide-i18n#method-i-distance_of_time_in_words_to_now](https://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-distance_of_time_in_words_to_now)
+    * [ihoweri#actionview-helpers (Chinese)](https://ihower.tw/rails/actionview-helpers.html)
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.2...v0.0.3
   * Start trying Multi-Language for layout
@@ -107,13 +107,14 @@
           * Map integer to string value, so **change column type to integer**
           * **DO NOT USE value as column name**, because enum will create related method using method name value
             * https://api.rubyonrails.org/v6.0.3.2/classes/ActiveRecord/Enum.html
-        * Enum Ref:
-          * https://guides.rubyonrails.org/active_record_querying.html#enums
-          * https://api.rubyonrails.org/v6.0.3.2/classes/ActiveRecord/Enum.html
-          * `rails g migration ChangeColumnValueToConfigValue`
-          * `rails g migration ChangeConfigValueTypeToInteger`
-          * `rails db:migrate VERSION=20200829082752`
-          * `rails db:migrate`
+        * Enum ref:
+          * [RailsGuide#enums](https://guides.rubyonrails.org/active_record_querying.html#enums)
+          * [RailsAPI#Enum](https://api.rubyonrails.org/v6.0.3.2/classes/ActiveRecord/Enum.html)
+          * Change column type from var to integer
+            * `rails g migration ChangeColumnValueToConfigValue`
+            * `rails g migration ChangeConfigValueTypeToInteger`
+            * `rails db:migrate VERSION=20200829082752`
+            * `rails db:migrate`
       * detected by **The Accept-Language HTTP header**
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.3...v0.0.4
