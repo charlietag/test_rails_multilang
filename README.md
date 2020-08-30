@@ -103,6 +103,17 @@
   * Start trying Multi-Language for layout
     * **change locale by -**
       * Config setting in DB - Config.where(name: "locale").first.value
+        * Enum
+          * Map integer to string value, so **change column type to integer**
+          * **DO NOT USE value as column name**, because enum will create related method using method name value
+            * https://api.rubyonrails.org/v6.0.3.2/classes/ActiveRecord/Enum.html
+        * Enum Ref:
+          * https://guides.rubyonrails.org/active_record_querying.html#enums
+          * https://api.rubyonrails.org/v6.0.3.2/classes/ActiveRecord/Enum.html
+          * `rails g migration ChangeColumnValueToConfigValue`
+          * `rails g migration ChangeConfigValueTypeToInteger`
+          * `rails db:migrate VERSION=20200829082752`
+          * `rails db:migrate`
       * detected by **The Accept-Language HTTP header**
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.3...v0.0.4

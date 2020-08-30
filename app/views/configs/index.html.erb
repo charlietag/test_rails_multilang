@@ -15,7 +15,7 @@
     <% @configs.each do |config| %>
       <tr>
         <td><%= config.name %></td>
-        <td><%= config.value %></td>
+        <td><%= config.config_value %></td>
         <td><%= link_to 'Show', config %></td>
         <td><%= link_to 'Edit', edit_config_path(config) %></td>
         <td><%= link_to 'Destroy', config, method: :delete, data: { confirm: 'Are you sure?' } %></td>

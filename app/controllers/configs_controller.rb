@@ -69,6 +69,6 @@ class ConfigsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def config_params
-      params.require(:config).permit(:name, :value)
+      params.require(:config).permit(:name, :config_value)
     end
 end
