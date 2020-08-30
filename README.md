@@ -109,6 +109,7 @@
             * https://api.rubyonrails.org/v6.0.3.2/classes/ActiveRecord/Enum.html
         * Enum ref:
           * [RailsGuide#enums](https://guides.rubyonrails.org/active_record_querying.html#enums)
+            * **The enum macro maps an integer column to a set of possible values.**
           * [RailsAPI#Enum](https://api.rubyonrails.org/v6.0.3.2/classes/ActiveRecord/Enum.html)
           * Change column type from var to integer
             * `rails g migration ChangeColumnValueToConfigValue`
