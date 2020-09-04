@@ -1,5 +1,9 @@
 class ConfigsController < ApplicationController
   before_action :set_config, only: [:show, :edit, :update, :destroy]
+  before_action :set_config_arrays, only: [:new, :edit]
+
+  # app/controllers/concerns/set_config_arrays.rb
+  #include SetConfigArrays
 
   # GET /configs
   # GET /configs.json
@@ -70,5 +74,22 @@ class ConfigsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def config_params
       params.require(:config).permit(:name, :config_value)
+    end
+
+
+    # Use this approach, instead of app/controllers/concerns/set_config_arrays.rb
+    def set_config_arrays
+      @config_names = Array.new
+      @config_names.push %W(#{Config.human_attribute_name('name.language')} language)
+
+      @config_values = Array.new
+      Config.config_values.keys.each do |v|
+        @config_values.push %W{#{Config.human_attribute_name("config.config_value.#{v}")} #{v}}
+      end
+
+      #render plain: @config_values.inspect
+
+      #render plain: @config_names[0][0].inspect
+      #render plain: @config_names.inspect
     end
 end

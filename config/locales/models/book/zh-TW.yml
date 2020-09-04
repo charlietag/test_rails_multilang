@@ -1,9 +1,7 @@
 "zh-TW":
   activerecord:
     models:
-      book:
-        one: 書籍
-        other: 書籍
+      book: "書籍"
     attributes:
       book:
         name: "書名"

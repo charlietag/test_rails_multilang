@@ -2,9 +2,7 @@
 en:
   activerecord:
     models:
-      book:
-        one: Book
-        other: Books
+      book: "Book"
     attributes:
       book:
         name: "Book Name"

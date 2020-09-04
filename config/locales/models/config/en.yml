@@ -1,0 +1,14 @@
+# https://guides.rubyonrails.org/i18n.html#overview-of-other-built-in-methods-that-provide-i18n-support
+en:
+  activerecord:
+    models:
+      config: "Configuration"
+    attributes:
+      config:
+        name: "Option"
+        config_value: "Value"
+      config/name:
+        language: "Language"
+      config/config_value:
+        en: "English"
+        "zh-TW": "Chinese (Taiwan)"

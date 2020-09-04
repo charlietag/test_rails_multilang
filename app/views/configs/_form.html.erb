@@ -4,8 +4,9 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :name, collection: ['locale'], selected: 'locale', include_blank: false %>
-    <%= f.input :config_value, collection: Config.config_values.keys, include_blank: false %>
+    <%# f.input :name, collection: ['language'], selected: 'language', include_blank: false %>
+    <%= f.input :name, collection: @config_names, selected: @config_names[0][0], include_blank: false %>
+    <%= f.input :config_value, collection: @config_values, include_blank: false %>
   </div>
 
   <div class="form-actions">
