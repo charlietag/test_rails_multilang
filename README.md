@@ -116,9 +116,14 @@
             * `rails g migration ChangeConfigValueTypeToInteger`
             * `rails db:migrate VERSION=20200829082752`
             * `rails db:migrate`
-      * detected by **The Accept-Language HTTP header**
-
+        * Tried `app/{models,controllers}/concerns/*.rb`
+          * Not recommended to use ([link][https://medium.com/@carlescliment/about-rails-concerns-a6b2f1776d7d])
+          * Use before_action inside Controller instead
+          * Use Service Object over **concerns**
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.3...v0.0.4
+  * detected by **The Accept-Language HTTP header**
+
+* https://github.com/charlietag/test_rails_multilang/compare/v0.0.4...v0.0.5
   * Start trying GEM: **globalize**
 
 
