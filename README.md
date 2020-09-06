@@ -121,7 +121,7 @@
           * Use before_action inside Controller instead
           * Use Service Object over **concerns**
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.3...v0.0.4
-  * detected by **The Accept-Language HTTP header**
+  * set locale by detecting **The Accept-Language HTTP header**
   * Set locale **through DB data**
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.4...v0.0.5
