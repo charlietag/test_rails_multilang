@@ -1,4 +1,7 @@
 class Config < ApplicationRecord
+# ---------------------------------------------------------------------------
+# Enums type
+# ---------------------------------------------------------------------------
   # Enums
   # Ref. https://guides.rubyonrails.org/active_record_querying.html#enums
   # Ref. https://api.rubyonrails.org/v6.0.3.2/classes/ActiveRecord/Enum.html
@@ -18,4 +21,23 @@ class Config < ApplicationRecord
   # enum can only be used in column type : integer
   # {"locale"=> 0}
   #enum name: [:locale]
+# ---------------------------------------------------------------------------
+
+
+# ---------------------------------------------------------------------------
+# Fetch locale config from DB
+# ---------------------------------------------------------------------------
+# https://guides.rubyonrails.org/active_record_querying.html#scopes
+# The following are the same result
+
+# Scope
+# scope :current_time_zone, -> { where(name: "time_zone").first.value }
+
+# Method , preffered, especially when passing argv into scope
+def self.get_current_locale
+  where(name: "language").first.config_value
+end
+# ---------------------------------------------------------------------------
+
+
 end
