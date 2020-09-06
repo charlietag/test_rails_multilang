@@ -56,6 +56,9 @@ class ApplicationController < ActionController::Base
   # ------------------------------------------------------
   # Set locale The Accept-Language HTTP header
   # ------------------------------------------------------
+  # Ref. https://guides.rubyonrails.org/i18n.html#choosing-an-implied-locale
+  # Ref. https://yalantis.com/blog/multi-language-ruby-on-rails-app-development/
+
   # private
   # def extract_locale_from_accept_language_header
   #   req_http_lang = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
