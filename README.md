@@ -125,15 +125,17 @@
   * Set locale **through DB data**
 
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.4...v0.0.5
-  * Start trying GEM: **globalize**
+  * ~~Start trying GEM: **globalize**~~
+  * Start trying GEM: **mobility**
 
 
 ## Note
 * Package - Multi-language content
-  * `gem 'globalize', '>= 6.0.0.alpha.1'`
+  * ~~`gem 'globalize', '>= 6.0.0.alpha.1'`~~
   * `config.i18n.fallbacks = true`
     * This is already been set in `{RailsApp}/config/environments/production.rb`
     * This is used , when choosed locale is not found.
+  * `gem 'mobility', '~> 0.8.13'`
 * Leak issue
   * https://guides.rubyonrails.org/i18n.html#managing-the-locale-across-requests
     * Dos
@@ -148,6 +150,7 @@
     * Ref. https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/zh-TW.yml
     * Ref. https://yalantis.com/blog/multi-language-ruby-on-rails-app-development/
   * Content Multi-Language
-    * Ref. https://github.com/globalize/globalize/tree/v6.0.0.alpha.1
+    * ~~ref. https://github.com/globalize/globalize/tree/v6.0.0.alpha.1~~
+    * Ref. https://github.com/shioyama/mobility/tree/0-8-stable
   * It's About Time (Zones)
     * https://thoughtbot.com/blog/its-about-time-zones
