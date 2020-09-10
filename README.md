@@ -169,6 +169,9 @@
   * Mariadb : **innodb max key length is 3072 bytes ([mariadb#page-sizes](https://mariadb.com/kb/en/innodb-limitations/#page-sizes))**
     ![mariadb-page-sizes](/screenshots/mariadb___page_sizes.png)
 
+  * MySQL : **innodb max key length is 3072 bytes ([MySQL#innodb-limits](https://dev.mysql.com/doc/refman/8.0/en/innodb-limits.html))**
+    ![mysql-page-sizes](/screenshots/mysql___page_sizes.png)
+
   * Mobility : **github issue discussions ([github-mobility#issue-276642771](https://github.com/shioyama/mobility/issues/110#issue-276642771))**
     ![github-issue-fix-1](/screenshots/github___issue_fix_1.png)
 
