@@ -154,3 +154,25 @@
     * Ref. https://github.com/shioyama/mobility/tree/0-8-stable
   * It's About Time (Zones)
     * https://thoughtbot.com/blog/its-about-time-zones
+
+# Note - Mobility (gem)
+* Issue : **Add index failed , innodb key length > 3072**
+
+  ```bash
+  -- add_index(:mobility_string_translations, [:translatable_type, :key, :value, :locale], {:name=>:index_mobility_string_translations_on_query_keys})
+  rails aborted!
+  StandardError: An error has occurred, all later migrations canceled:
+  Mysql2::Error: Specified key was too long; max key length is 3072 bytes
+  ```
+
+* Root cause
+  * Mariadb - innodb max key length is 3072 bytes ([mariadb#page-sizes](https://mariadb.com/kb/en/innodb-limitations/#page-sizes))
+    ![mariadb-page-sizes](/screenshots/mariadb___page_sizes.png)
+
+  * Mobility - github issue discussions ([github-mobility#issue-276642771](https://github.com/shioyama/mobility/issues/110#issue-276642771))
+    ![github-issue-fix-1](/screenshots/github___issue_fix_1.png)
+
+    ![github-issue-fix-2](/screenshots/github___issue_fix_2.png)
+
+* Possible Fix
+  * According to [github-mobility#issue-276642771](https://github.com/shioyama/mobility/issues/110#issue-276642771), change the default migration string length to avoid index-key-length issue
