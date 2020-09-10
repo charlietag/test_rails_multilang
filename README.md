@@ -166,10 +166,10 @@
   ```
 
 * Root cause
-  * Mariadb - innodb max key length is 3072 bytes ([mariadb#page-sizes](https://mariadb.com/kb/en/innodb-limitations/#page-sizes))
+  * Mariadb : **innodb max key length is 3072 bytes ([mariadb#page-sizes](https://mariadb.com/kb/en/innodb-limitations/#page-sizes))**
     ![mariadb-page-sizes](/screenshots/mariadb___page_sizes.png)
 
-  * Mobility - github issue discussions ([github-mobility#issue-276642771](https://github.com/shioyama/mobility/issues/110#issue-276642771))
+  * Mobility : **github issue discussions ([github-mobility#issue-276642771](https://github.com/shioyama/mobility/issues/110#issue-276642771))**
     ![github-issue-fix-1](/screenshots/github___issue_fix_1.png)
 
     ![github-issue-fix-2](/screenshots/github___issue_fix_2.png)
