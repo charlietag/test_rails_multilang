@@ -155,7 +155,7 @@
   * It's About Time (Zones)
     * https://thoughtbot.com/blog/its-about-time-zones
 
-# Note - Mobility (gem)
+# Mobility (gem) - Note
 * Issue : **Add index failed , innodb key length > 3072**
 
   ```bash
@@ -205,3 +205,14 @@
         end
       end
       ```
+
+# Mobility (gem) - KeyValue Backend
+Reference: https://github.com/shioyama/mobility/wiki/KeyValue-Backend
+![mobility_schema.png](/screenshots/mobility___schema.png)
+
+* After **rails migration for mobility**, 2 tables are added
+  * mobility_string_translations
+    ![table___mobility_string_translations.png](/screenshots/table___mobility_string_translations.png)
+
+  * mobility_text_translations
+    ![table___mobility_text_translations.png](/screenshots/table___mobility_text_translations.png)
