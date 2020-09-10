@@ -175,7 +175,7 @@
     ![github-issue-fix-2](/screenshots/github___issue_fix_2.png)
 
 * Possible Fix
-  * According to [github-mobility#issue-276642771](https://github.com/shioyama/mobility/issues/110#issue-276642771), change the default migration string length to avoid index-key-length issue
+  * According to [github-mobility#issue-276642771](https://github.com/shioyama/mobility/issues/110#issue-276642771), **change the default migration string length to avoid index-key-length** issue
     * <Rails.root>/db/migrate/20200907070238_create_string_translations.rb
 
       ```ruby
