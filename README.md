@@ -210,7 +210,7 @@
 Reference: https://github.com/shioyama/mobility/wiki/KeyValue-Backend
 ![mobility_schema.png](/screenshots/mobility___schema.png)
 
-See more : https://dejimata.com/2017/3/3/translating-with-mobility
+Why mobility: https://dejimata.com/2017/3/3/translating-with-mobility
 
 * After **rails migration for mobility**, 2 tables are added
   * mobility_string_translations
