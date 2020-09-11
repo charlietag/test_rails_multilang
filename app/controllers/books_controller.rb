@@ -4,7 +4,18 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+
+    # --- The following methods all work , the same result (eager load)---
+    # Avoid N+1 query , use eager_load
+    # Ref. https://github.com/shioyama/mobility/wiki/KeyValue-Backend#eager-loading-and-avoiding-n1-queries
+
+    @books = Book.eager_load(:text_translations, :string_translations)
+    #@books = Book.eager_load(:text_translations, :string_translations).all
+    #@books = Book.all.eager_load(:text_translations, :string_translations)
+
+    # --- worst method, slowest, slower by many times ---
+    #@books = Book.all
+
   end
 
   # GET /books/1

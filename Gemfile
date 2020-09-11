@@ -65,5 +65,6 @@ gem 'simple_form'
 # For Multi-language layout
 gem 'rails-i18n', '~> 6.0.0'
 
-
+# For Translating Model Content
+gem 'mobility', '~> 0.8.13'
 

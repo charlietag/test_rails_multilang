@@ -127,7 +127,7 @@
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.4...v0.0.5
   * ~~Start trying GEM: **globalize**~~
   * Start trying GEM: **mobility**
-  * The original content ***will not show***, replace with the content in translation table, ***after finshed setup***
+  * [**app/models/book.rb**] The original content ***will not show***, replace with the content in translation table, ***after finshed setup***
 
     ```diff
     class Book < ApplicationRecord
@@ -138,6 +138,22 @@
     + translates :author, type: :string
     + translates :description, type: :text
      end
+    ```
+
+  * [**app/controllers/books_controller.rb**] Don't forget to ***AVOID N+1 query (eager_load)***
+    * Ref. https://github.com/shioyama/mobility/wiki/KeyValue-Backend#eager-loading-and-avoiding-n1-queries
+
+    ```diff
+    class BooksController < ApplicationController
+      before_action :set_book, only: [:show, :edit, :update, :destroy]
+
+      def index
+    +   @books = Book.eager_load(:text_translations, :string_translations)
+    -   @books = Book.all
+      end
+
+      #...
+    end
     ```
 
   * Result
