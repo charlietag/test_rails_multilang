@@ -127,7 +127,7 @@
 * https://github.com/charlietag/test_rails_multilang/compare/v0.0.4...v0.0.5
   * ~~Start trying GEM: **globalize**~~
   * Start trying GEM: **mobility**
-  * After finshed setup, the original content will not show, replace with the content in translation table
+  * The original content ***will not show***, replace with the content in translation table, ***after finshed setup***
 
     ```diff
     class Book < ApplicationRecord
@@ -138,9 +138,17 @@
     + translates :author, type: :string
     + translates :description, type: :text
      end
-
     ```
 
+  * Result
+    * Original table content
+      ![result___origin_table](/screenshots/result___origin_table.png)
+    * New renderd view
+      ![result___view](/screenshots/result___view.png)
+    * New ***translated record - For string type***
+      ![result___table_string_translations](/screenshots/result___table_string_translations.png)
+    * New ***translated record - For string text***
+      ![result___table_text_translations](/screenshots/result___table_text_translations.png)
 
 ## Note
 * Package - Multi-language content
